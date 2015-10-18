@@ -11,7 +11,7 @@
             </div>
 
 
-            @if isset($parsed)
+            @if (isset($parsed))
                 <pre style="text-align: left">{{ $parsed }}</pre>
             @endif
             <button type="submit" class="btn btn-default">Парсить</button>
