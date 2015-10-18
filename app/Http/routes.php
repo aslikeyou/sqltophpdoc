@@ -11,7 +11,10 @@
 |
 */
 $app->get('/', function () use ($app) {
-    return view('wellcome');
+    $sqlcode = '';
+    return view('wellcome', [
+        'sqlcode' => $sqlcode,
+    ]);
 });
 
 function getValidTypeFromSql($type) {
