@@ -7,10 +7,13 @@
         <form method="post">
             <div class="form-group">
                 <label for="sqlBlockId">Sql для парсинга</label>
-                <textarea id="sqlBlockId" name="sqlcode" class="form-control" rows="3">{{$sqlcode}}</textarea>
+                <textarea id="sqlBlockId" name="sqlcode" class="form-control" rows="3">{{ $sqlcode or ''}}</textarea>
             </div>
 
-            <pre style="text-align: left">{{ $parsed }}</pre>
+
+            @if isset($parsed)
+                <pre style="text-align: left">{{ $parsed }}</pre>
+            @endif
             <button type="submit" class="btn btn-default">Парсить</button>
         </form>
     </div>
