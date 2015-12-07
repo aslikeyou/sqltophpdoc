@@ -23,7 +23,8 @@ function getValidTypeFromSql($type) {
     $a = [
         'varchar' => 'string',
         'timestamp' => 'string',
-        'int' => 'integer'
+        'int' => 'integer',
+        'datetime' => 'string'
     ];
 
     if(isset($a[$type])) {
